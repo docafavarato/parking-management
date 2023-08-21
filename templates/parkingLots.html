@@ -1,0 +1,48 @@
+{% extends "index.html" %}
+
+{% block content %}
+<div class="container align-items-center justify-content-center mt-5 content">
+    <div class="d-flex align-items-center">
+        <h1 class="display-5">Registered parking lots</h1>
+    </div>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr class="table-dark">
+                <th scope="col">Id</th>
+                <th scope="col">Tag</th>
+                <th scope="col">Occupied</th>
+                <th scope="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pl in parkingLots %}
+            <tr>
+                <th scope="row">{{ pl["id"] }}</th>
+                <td>{{ pl["tag"] }}</td>
+                <td>{% if pl["occupied"] %} 
+                    <a class="btn btn-danger custom-radio-label custom-danger">Yes</a>
+                    {% else %} 
+                    <a class="btn btn-success custom-radio-label custom-success">No</a>
+                    {% endif %}</td>
+                <td>
+                    <a href="{{ url_for('editParkingLot', id=pl['id']) }}"><i class="fa-solid fa-pen-to-square"></i></a>
+                    &nbsp;
+                    <a href="{{ url_for('deleteParkingLot', id=pl['id']) }}"><i class="fa-solid fa-trash"></i></a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="dropdown">
+        <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Filter by
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{{ url_for('parkingLots', filter=3) }}">Occupied</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('parkingLots', filter=2) }}">Unoccupied</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="{{ url_for('parkingLots', filter=1) }}">All</a></li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

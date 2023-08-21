@@ -1,0 +1,74 @@
+{% extends "index.html" %}
+
+{% block content %}
+<div class="container align-items-center justify-content-center mt-5 content">
+    <h1 class="display-5">Registered parkings ({{ car["licensePlate"].upper() }})</h1>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr class="table-dark">
+                <th scope="col">Id</th>
+                <th scope="col">Car</th>
+                <th scope="col">Lot</th>
+                <th scope="col">Status</th>
+                <th scope="col">Start time</th>
+                <th scope="col">End time</th>
+                <th scope="col">Duration (Hours)</th>
+                <th scope="col">Rate</th>
+                <th scope="col">Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for parking in parkings %}
+            {% if parking["paymentGenerated"] != true %}
+            <tr>
+                <th scope="row">{{ parking["id"] }}</th>
+                <td>{{ parking["car"]["licensePlate"].upper() }}</td>
+                <td>{{ parking["parkingLot"]["tag"] }}</td>
+                <td>
+                    {% if parking["ended"] %}
+                    <a class="btn btn-danger custom-label custom-danger">Ended</a>
+                    {% else %}
+                    <a class="btn btn-success custom-label custom-success">Going</a>
+                    {% endif %}
+                </td>
+                <td>{{ parking["startTime"] }}</td>
+                <td>
+                    {% if parking["endTime"] == None %}
+                    -
+                    {% else %}
+                    {{ parking["endTime"] }}
+                    {% endif %}
+                </td>
+                <td>
+                    {% if parking["duration"] == 0 %}
+                    -
+                    {% else %}
+                    {{ parking["duration"] }}
+                    {% endif %}
+                </td>
+                <td>${{ parking["rate"] }}</td>
+                <td>
+                    {% if parking["total"] == None %}
+                    -
+                    {% else %}
+                    ${{ parking["total"] }}
+                    {% endif %}
+                </td>
+            </tr>
+            {% endif %}
+            {% endfor %}
+        </tbody>
+    </table>
+    <div class="dropdown">
+        <a class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            Filter by
+        </a>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="{{ url_for('carParkings', id=car['id'], filter=2) }}">Going</a></li>
+            <li><a class="dropdown-item" href="{{ url_for('carParkings', id=car['id'], filter=3) }}">Ended</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="{{ url_for('carParkings', id=car['id'], filter=1) }}">All</a></li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="container mt-5">
+    <h1 class="display-5">
+        Dashboard
+        <span class="text-body-secondary display-6 small-text">Control panel</span>
+    </h1>
+    <div class="row mt-3">
+        <div class="col">
+            <a class="btn btn-primary btn-dashboard" href="{{ url_for('cars') }}">
+                <h1>{{ totalCars }}</h1>
+                <p>Registered cars</p>
+            </a>
+            <a class="btn btn-success btn-dashboard" href="{{ url_for('parkings', filter=1) }}">
+                <h1>{{ totalActiveParkings }}</h1>
+                <p>
+                    {% if totalActiveParkings > 1 or totalActiveParkings == 0 %}
+                    Active parkings
+                    {% else%}
+                    Active parking
+                    {% endif %}
+                </p>
+            </a>
+            <a class="btn btn-secondary btn-dashboard" href="{{ url_for('parkingLots', filter=1) }}">
+                <h1>{{ totalUnoccupiedLots }}/{{ totalLots }}</h1>
+                <p>Available parking lots</p>
+            </a>
+        </div>
+        <div class="row mt-2">
+            <div class="col">
+                <a href="{{ url_for('payments', filter=1) }}" class="btn btn-info btn-dashboard text-white">
+                    <h1>${{ totalPaidPaymentsToday }}</h1>
+                    <p>Today total earnings</p>
+                </a>
+                <a href="{{ url_for('payments', filter=3) }}" class="btn btn-warning btn-dashboard text-white">
+                    <h1>{{ totalPendingPayments }}</h1>
+                    <p>Pending payments</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,83 @@
+.nav-pills li a {
+    border-radius: 0rem !important;
+}
+
+.text-small {
+    font-size: 1rem !important;
+}
+
+.accordion-button:after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+}
+
+.btn-occupied {
+    cursor: default !important;
+}
+
+.custom-success:not([disabled]):not(.disabled).active,
+.custom-success:not([disabled]):not(.disabled):active,
+.custom-success:not([disabled]):not(.disabled).hover,
+.custom-success:not([disabled]):not(.disabled):hover{
+    color: #fff !important;
+    background-color: #188755 !important;
+    border-color: #188755 !important;
+}
+
+.custom-danger:not([disabled]):not(.disabled).active,
+.custom-danger:not([disabled]):not(.disabled):active,
+.custom-danger:not([disabled]):not(.disabled).hover,
+.custom-danger:not([disabled]):not(.disabled):hover {
+    color: #fff !important;
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
+}
+
+
+.custom-radio-label {
+	border-radius: 0rem !important;
+	height: 1.5rem;
+	width: 3.5rem;
+	font-size: .5rem;
+    line-height: 0.5rem !important;
+    cursor: default !important;
+}
+
+.custom-label {
+	border-radius: 0rem !important;
+	height: 1.5rem;
+	width: 4.5rem;
+	font-size: .3rem;
+    line-height: 0.5rem !important;
+    cursor: default !important;
+}
+
+.btn-dashboard {
+    border-radius: 0rem !important;
+    min-width: 25rem;
+}
+
+.small-text {
+    margin-left: 1rem;
+    font-size: 2rem !important;
+}
+
+.custom-payment-label {
+    border-radius: 0rem !important;
+	height: 1.5rem;
+	width: 5rem;
+	font-size: .3rem;
+    line-height: 0.5rem !important;
+    cursor: default !important;
+}
+
+.dropdown-toggle {
+    font-size: 1rem !important;
+    border: none !important;
+    background-color: inherit !important;
+    cursor: pointer !important;
+    text-decoration: none !important;
+}
+
+.dropdown-item {
+    cursor: pointer !important; 
+}
