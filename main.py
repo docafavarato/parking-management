@@ -4,6 +4,10 @@ from datetime import datetime
 
 app = Flask(__name__)
 
+@app.route("/")
+def return_index():
+    return redirect(url_for('dashboard'))
+
 @app.route("/parking-management")
 def index():
     return redirect(url_for('dashboard'))
