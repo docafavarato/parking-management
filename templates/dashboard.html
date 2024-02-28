@@ -36,6 +36,10 @@
                     <h1>{{ totalPendingPayments }}</h1>
                     <p>Pending payments</p>
                 </a>
+                <a href="{{ url_for('parkings', filter=1) }}" class="btn btn-danger btn-dashboard text-white">
+                    <h1>{{ totalParkingsToday }}</h1>
+                    <p>Parkings today</p>
+                </a>
             </div>
         </div>
     </div>

@@ -12,6 +12,7 @@
                 <th scope="col">Status</th>
                 <th scope="col">Start time</th>
                 <th scope="col">End time</th>
+                <th scope="col">Date</th>
                 <th scope="col">Duration (Hours)</th>
                 <th scope="col">Rate</th>
                 <th scope="col">Total</th>
@@ -39,6 +40,9 @@
                     {% else %}
                     {{ parking["endTime"] }}
                     {% endif %}
+                </td>
+                <td>
+                    {{ parking["date"] }}
                 </td>
                 <td>
                     {% if parking["duration"] == 0 %}

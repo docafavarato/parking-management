@@ -21,9 +21,11 @@ def dashboard():
     totalUnoccupiedLots = requests.get("http://localhost:8080/dashboard/total-unoccupied-parking-lots").json()
     totalPaidPaymentsToday = requests.get("http://localhost:8080/dashboard/total-paid-payments-value-today").json()
     totalPendingPayments = requests.get("http://localhost:8080/dashboard/total-pending-payments").json()
+    totalParkingsToday = requests.get("http://localhost:8080/dashboard/total-parkings-today").json()
     return render_template("dashboard.html", totalCars=totalCars, totalActiveParkings=totalActiveParkings,
                            totalLots=totalLots, totalUnoccupiedLots=totalUnoccupiedLots,
-                           totalPaidPaymentsToday=totalPaidPaymentsToday, totalPendingPayments=totalPendingPayments)
+                           totalPaidPaymentsToday=totalPaidPaymentsToday, totalPendingPayments=totalPendingPayments,
+                           totalParkingsToday=totalParkingsToday)
 
 # ------------------ PARKING LOTS ---------------------
 @app.route("/parking-management/parking-lots/filter/<int:filter>", methods=["GET", "POST"])
