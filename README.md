@@ -6,13 +6,14 @@ The API repository is <a href="https://github.com/docafavarato/parking-managemen
 
 # Functions
 ## Dashboard
-![image](https://github.com/docafavarato/parking-management/assets/98183878/aaaa58dd-581d-4e1b-91e7-814f83afc63a)
+![image](https://github.com/docafavarato/parking-management/assets/98183878/2a148bb8-428c-47a3-ac9a-ae5747b47f4c)
 The dashboard section show some status of the establishment, such as:
 - Registered cars
 - Active parkings
 - Available parking lots
 - Today total earnings
 - Pending payments
+- Total parkings today
 ## Parkings
 ![image](https://github.com/docafavarato/parking-management/assets/98183878/5911eeed-3119-4dd5-bfa8-221fb22242b7)
 The "Add a parking" section contains a form that creates a new parking based on the following attributes:
