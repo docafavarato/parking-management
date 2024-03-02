@@ -1,8 +1,9 @@
 # Parking management
 
 # About
-A complete functional parking management system built with Java (Spring) and Python (Flask).<br><br>
-The API repository is <a href="https://github.com/docafavarato/parking-management-api">here</a>
+> A complete functional parking management system built with Java (Spring) and Python (Flask).
+
+> The API repository is <a href="https://github.com/docafavarato/parking-management-api">here</a>
 
 # Functions
 ## Dashboard
