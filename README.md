@@ -51,3 +51,8 @@ The "Manage cars" section contains a table with the attributes of all the regist
 ## Payments
 ![image](https://github.com/docafavarato/parking-management/assets/98183878/ebd64311-24e4-4814-a73b-f7b48d1cd3c3)
 The "Manage payments" section contains a table with the attributes of all the registered payments and two buttons, one to erase the payment and one to complete the payment if it's pending.
+
+# Author
+João Pedro Favarato
+
+<a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-favarato-71800b204/">LinkedIn</a>
