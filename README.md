@@ -56,4 +56,4 @@ The "Manage payments" section contains a table with the attributes of all the re
 # Author
 João Pedro Favarato
 
-<a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-favarato-71800b204/">LinkedIn</a>
+<a href="https://www.linkedin.com/in/favarato/">LinkedIn</a>
