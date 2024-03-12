@@ -2,9 +2,10 @@
 
 # About
 ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-> A complete functional parking management system built with Java (Spring Boot, JPA/Hibernate, Maven), Python (Flask) and HTML/CSS/JS.
 
-> The API repository is <a href="https://github.com/docafavarato/parking-management-api">here</a>
+A complete functional parking management system built with Java (Spring Boot, JPA/Hibernate, Maven), Python (Flask) and HTML/CSS/JS.
+
+The API repository is <a href="https://github.com/docafavarato/parking-management-api">here</a>
 
 # Functions
 ## Dashboard
